@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+@font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+}
+
+@font-face {
+    font-family: 'KyoboHandwriting2022khn';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KyoboHandwriting2022khn.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)), url("../images/clapperboard-gaadc14235_1280.jpg");
+    /* filter: blur(); */
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+    opacity: 0.7;
+    font-family: 'GmarketSansMedium';
+    color: #C9B38E;
+    height: 100%; /* 500px */
+    width: 100%;
+    margin: 0 auto;
+    /* border: 2px solid white; */
+}
+
+#container {
+    width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    /* margin-top: 100px; */
+    /* border: 2px solid white; */
+    overflow: auto;
+    padding-top: 100px;
+}
+
+#movielist {
+     letter-spacing: 3px;
+     color :#C9B38E;
+     text-align: center;
+     margin-top: 10px;
+     padding-bottom: 20px;
+  }
+  
+#list {
+	width:980px;
+	/* padding-left: 12px; */
+	/* border: 2px solid red; */
+	margin: 0 auto;
+}
+
+#title {
+	text-align: center;
+	color :#C9B38E;
+	margin-bottom: -3px;
+}
+
+#point {
+	text-align: center;
+	color :pink;
+	margin-bottom: -3px;
+}
+
+/* div {
+	margin-bottom: -3px;
+	border: 2px solid white;
+} */
+
+#item {
+	/* float: left; */
+	display:inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    /* border: 2px solid white; */
+    overflow: hidden;
+    background-color: rgba( 0, 0, 0, 0.5 );
+    height: 315px;
+}
+
+#item:hover {
+transform:scale(1.2);             /*  default */
+-webkit-transform:scale(1.2);  /*  크롬 */
+-moz-transform:scale(1.2);     /* FireFox */
+-o-transform:scale(1.2);        /* Opera */
+cursor: pointer;
+}
+
+.button_list {
+	width: 110px;
+	font-size: 20px;
+	padding: 10px;
+	margin-top: -90px;
+	margin-right: 50px;
+	float: right;
+	background-color: rgba(0, 0, 0, 0.1);
+	font-family: 'GmarketSansMedium';
+    color: #C9B38E;
+    border-radius: 10%;
+    /* border: 1px solid white; */
+}
+
+#range_list {
+	padding: 0px;
+	font-size: 15px;
+	margin-top: -40px;
+}
+

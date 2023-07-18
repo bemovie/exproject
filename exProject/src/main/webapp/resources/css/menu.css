@@ -1,0 +1,97 @@
+nav {
+    width: 100%;
+  /*   margin-top: -150px;
+    margin-left: -10px; */
+    /* margin-top: -90px; */
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5));
+	height: 100px;
+	/* border: 2px solid white; */
+	line-height: 15px;
+	position: fixed;
+	z-index: 1;
+     }
+.menu {
+	float: left;
+	color: #C9B38E;
+	text-decoration: none;
+	font-size: 25px;
+}
+
+li {
+	display: inline-block;		
+	color: #C9B38E;
+	font-size: /* 1.5em; */ 20px;
+	margin: 0 30px;
+	float: left;
+}
+      a {
+	text-decoration: none;
+}
+      nav a:link, a:visited {
+	color: #fff;
+}
+nav a:hover, a:active {
+	color: #C9B38E;
+}
+
+.login {
+	float: right;
+	color: #C9B38E;
+	text-decoration: none;
+	/* margin-top: 5px; */
+}
+.hero {
+    width: 170px;
+    height: 20px;
+    border-radius: 5px 5px 5px 5px; border-bottom: 2px solid #271F21; padding: 0.5em; background: #C9B38E;
+    float: left;
+    color: #271F21;
+    /* margin: auto 0; */
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px white;
+    margin-left: -50px;
+    margin-top: -20px;
+    font-family: "KyoboHandwriting2022khn";
+}
+
+h1 {
+     margin-top: 3px; 
+     letter-spacing: 3px;
+  }
+
+/* h3 {
+    margin-top: -37px;
+    font-size: 13px;
+  } */
+
+.icon{
+    width: 35px;
+    height:30px;
+    margin-top: -5px;
+    margin-left: -5px;
+    float: left;
+}
+.small {
+    font-size: 13px;
+}
+.logotitle {
+    color: #271F21 !important;
+}
+
+#main-nav {
+    padding-top: 30px;
+}
+#sub-nav {
+    float: right;
+    /* margin-top: -2px; */
+    font-size: 11px;
+}
+
+.join {
+    border: 1px solid white;
+    border-radius: 5px 5px;
+    padding: 5px;
+}
