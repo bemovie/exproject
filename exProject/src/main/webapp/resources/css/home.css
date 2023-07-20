@@ -137,10 +137,10 @@ button:disabled{/**버튼 속성이 disabled되면 색을 바꾼다.**/
     background-color: rgba( 0, 0, 0, 0.5 );
 }
 .movie_wrapper:hover {
-transform:scale(1.2);             /*  default */
--webkit-transform:scale(1.2);  /*  크롬 */
--moz-transform:scale(1.2);     /* FireFox */
--o-transform:scale(1.2);        /* Opera */
+transform:scale(1.1);             /*  default */
+-webkit-transform:scale(1.1);  /*  크롬 */
+-moz-transform:scale(1.1);     /* FireFox */
+-o-transform:scale(1.1);        /* Opera */
 cursor: pointer;
 }
 

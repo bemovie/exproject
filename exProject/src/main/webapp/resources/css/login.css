@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+@font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+}
+
+@font-face {
+    font-family: 'KyoboHandwriting2022khn';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KyoboHandwriting2022khn.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)), url("../images/clapperboard-gaadc14235_1280.jpg");
+    /* filter: blur(); */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    opacity: 0.7;
+    font-family: 'GmarketSansMedium';
+    color: #C9B38E;
+    height: 100%; /* 500px */
+    width: 100%;
+    margin: 0 auto;
+    /* border: 2px solid white; */
+}
+
+#container {
+    width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    /* margin-top: 100px; */
+    /* border: 2px solid white; */
+    overflow: auto;
+    padding-top: 110px;
+    /* text-align: center; */
+    /* font-size: 20px; */
+}
+
+
+.input_login {
+	width: 90%;
+    height: 100%;
+    border: 3px solid #C9B38E;
+    border-radius: 15px;
+    padding: 10px 10px;
+    font-size: 20px;
+    text-size-adjust: auto;
+    color: #271F21;
+    font-family: 'GmarketSansMedium';
+    opacity: 0.5;
+    /* margin-bottom: 50px; */
+    resize: none;
+}
+
+#select_login {
+	width: 95%;
+}
+
+#submit_login:hover {
+	background: #C9B38E;
+}
+
+.check_login {
+	word-break:break-all;
+}
+
+table {
+	/* border : 2px solid pink; */
+	margin: 0 auto;
+	width: 60%;
+	border-spacing: 50px;
+	text-align: center;
+}
+
+th {
+	text-align: left;
+	/* padding-left: 50px; */
+}
+
+
+#login_size {
+	width: 100%;
+	/* border: 2px solid pink; */
+}
+
+#title_login {
+	text-align: center;
+	letter-spacing: 3px;
+}
+#title_login:after {
+	content: "";
+	display: block;
+	width: 150px;
+	border-bottom: 2px solid #C9B38E;
+	margin: 20px auto;
+}
+
+#content_login {
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	/* border: 2px solid red; */
+	padding-bottom: 50px;
+}
+
+.submit {
+	text-align: center;
+}
+
+#submit_login{
+	width: 100%; 
+}
+
+i {
+	margin-right: 10px;
+	font-size: 20px;
+	color: white;
+	font-style: normal;
+}

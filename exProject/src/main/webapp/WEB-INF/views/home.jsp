@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>영화 리뷰 커뮤니티 - 마무리 : My Movie Library</title>
+    <title>영화 리뷰 커뮤니티 - 마무리 : My Movie Review</title>
 	<link href="resources/css/home.css" rel="stylesheet">
 </head>
 <body>
@@ -22,13 +22,15 @@
 		        <div id="poster_top10">
 		        
 		            <c:forEach var="vo" items="${movieList}" varStatus="status">
-						<div class="movie_wrapper" onclick="location.href='movie/edit?movieId=${vo.movieId}'">
-							<%-- ${vo.movieTitle} : ${vo.moviePoint} --%> <%-- : ${vo.moviePoint} --%>
-							<div><img class="poster" src="http://localhost:8090/mmr/${vo.fileId}"></div>
-							<%-- <td><a href="${pageContext.request.contextPath}/movie/edit.do?movieId=<c:out value="${vo.movieId}" />"><c:out value="${vo.movieId}" /></a></td> --%>
-							<div class="title"><c:out value="${vo.movieTitle}" /></div>
-							<div class="point">${vo.moviePoint}%</div>
-						</div>
+		            	<c:if test="${ status.count <= 10 }">
+							<div class="movie_wrapper" onclick="location.href='movie/edit?movieId=${vo.movieId}'">
+								<%-- ${vo.movieTitle} : ${vo.moviePoint} --%> <%-- : ${vo.moviePoint} --%>
+								<div><img class="poster" src="${pageContext.request.contextPath}/resources/upload/${vo.fileId}"></div>
+								<%-- <td><a href="${pageContext.request.contextPath}/movie/edit.do?movieId=<c:out value="${vo.movieId}" />"><c:out value="${vo.movieId}" /></a></td> --%>
+								<div class="title"><c:out value="${vo.movieTitle}" /></div>
+								<div class="point">${vo.moviePoint}%</div>
+							</div>
+						</c:if>
 					</c:forEach>
 
 		        </div>
@@ -44,17 +46,16 @@
        	</div> 
         
         <div id="search">
-            <form name="해당 폼의 이름" action="값을 보낼 주소" method="post">
-            <input type="search" placeholder="검색어 입력">
+            <form action="${pageContext.request.contextPath}/movie/list" method="get">
+            <input name="searchWord" type="search" placeholder="검색어 입력">
+            <!-- <input type="submit"> -->
             <!-- <img src="images/search.png"> -->
             </form>
         </div>
 
         <div class="total">
-            <p><i>Total <span class="big" data-count="${moiveCount}">0</span> Movies , <span class="big" data-count="124">0</span> Reviews</i></p>
+            <p><i>Total <span class="big" data-count="${moiveCount}">0</span> Movies , <span class="big" data-count="${reviewCount}">0</span> Reviews</i></p>
         </div>
-        
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         
     </div>
 </div>

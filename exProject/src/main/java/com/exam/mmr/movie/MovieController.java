@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
 import com.exam.mmr.HomeController;
+import com.exam.mmr.mypage.MypageService;
 
 @Controller //스프링한테 Controller로 등록하라고 알려줌
 public class MovieController {	
@@ -25,6 +26,9 @@ public class MovieController {
 	private MovieService movieService;
 	//spring이 MovieService 객체를 가지고 있어야 한다
 	
+	@Autowired //@Resource @Inject 셋중 하나 사용하면 같은 역할
+	private MypageService mypageService;
+	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	
@@ -32,10 +36,13 @@ public class MovieController {
 	@GetMapping("/home")
 	public String home(MovieVo vo, Locale locale, Model model) {
 		logger.info("home 페이지 실행");
+		vo.setRange("point");
 		List<MovieVo> list = movieService.selectMovieList(vo);
-		int cnt = movieService.selectMovieCount();
+		int mcnt = movieService.selectMovieCount();
+		int rcnt = mypageService.selectReviewCount();
 		model.addAttribute("movieList", list);
-		model.addAttribute("moiveCount", cnt);
+		model.addAttribute("moiveCount", mcnt);
+		model.addAttribute("reviewCount", rcnt);
 		return "home";
 	}
 	
@@ -45,6 +52,8 @@ public class MovieController {
 	public String list(MovieVo vo, Model model) {
 		List<MovieVo> list = movieService.selectMovieList(vo);
 		model.addAttribute("movieList", list);
+		model.addAttribute("searchWord", vo.getSearchWord());
+		model.addAttribute("range", vo.getRange());		
 		return "movie/movieList";
 	}
 	

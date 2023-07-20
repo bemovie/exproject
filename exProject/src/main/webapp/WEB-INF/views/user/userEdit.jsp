@@ -9,7 +9,7 @@
 <title>E D I T</title>     
 <style> a{text-decoration-line: none;} a:visited {color:red;} a:hover{color:pink;}
 </style>
-<link href="../resources/css/movie/edit.css" rel="stylesheet">
+<link href="../resources/css/edit.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>                  
@@ -28,26 +28,6 @@
 				</div>
 				<div id="point">
 					${mvo.moviePoint}%
-				</div>
-				<div id="mypage_funclist">
-					<form action="${pageContext.request.contextPath}/mypage/add" method="get">
-						<input type="hidden" name="movieId" value="${mvo.movieId}" />
-						<c:choose>
-							<c:when test="${loginUser == null}">
-								<input class="mypage_func" type="button" value="보고싶어요" onclick="location.href='${pageContext.request.contextPath}/user/login'" />
-							</c:when>
-							<c:otherwise>
-								<input class="mypage_func" type="submit" value=${myList.movieTitle != null? '보고싶어요 취소' : '보고싶어요'} />						
-							</c:otherwise>
-						</c:choose>
-					</form>
-					<hr>
-					<form action="${pageContext.request.contextPath}/mypage/add" method="get">
-						<input type="hidden" name="movieId" value="${mvo.movieId}" />						
-						평점 <input type="range" name="mypagePoint" min="0" max="100" value=${myList.mypagePoint >=0? '${myList.myapgePoint}' : '50'} oninput="document.getElementById('value1').innerHTML=this.value;"/>
-       					<span id="value1">50</span>
-						<input class="mypage_func" type="submit" value="등록" />
-					</form>
 				</div>
 			</div>
 			

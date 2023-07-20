@@ -34,6 +34,23 @@
 		<beans:property name="maxUploadSize" value="-1"></beans:property>
 	</beans:bean>
 	
+	<!-- 핸들러인터셉터 등록 -->
+	<interceptors> <!-- 인터셉터를 여러개 등록할 수 있음 -->
+		<interceptor>
+			<!-- 인터셉터를 실행할 요청 경로(주소) 설정 -->
+			<!-- <mapping path="/**" /> --> <!-- 모든 경로 -->
+			<mapping path="/movie/*" />
+			<mapping path="/board/*" />
+			<!-- 인터셉터를 실행하지 않을 요청 경로(주소) 설정 -->
+			<!-- <exclude-mapping path="/home" /> -->
+			<!-- <exclude-mapping path="/user/login" /> -->
+			<!-- <exclude-mapping path="/user/join" /> -->
+			<!-- 실행할 인터셉터 클래스 설정 -->
+			<beans:bean class="com.exam.mmr.comm.LoginInterceptor" />
+		</interceptor>
+	</interceptors>
+	
+	
 	<context:property-placeholder location="classpath:config/*.properties"/>
 	
 	

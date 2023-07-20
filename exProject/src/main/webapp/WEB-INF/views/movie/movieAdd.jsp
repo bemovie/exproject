@@ -9,7 +9,7 @@
 <title>R E G I S T</title>     
 <style> a{text-decoration-line: none;} a:visited {color:red;} a:hover{color:pink;}
 </style>
-<link href="../resources/css/add.css" rel="stylesheet">
+<link href="../resources/css/movie/add.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <script src="../resources/js/preview.js"></script>

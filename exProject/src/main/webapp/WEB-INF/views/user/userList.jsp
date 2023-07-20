@@ -9,7 +9,7 @@
 <title>L I S T</title>     
 <style> a{text-decoration-line: none;} a:visited {color:red;} a:hover{color:pink;}
 </style>
-<link href="../resources/css/movie/list.css" rel="stylesheet">
+<link href="../resources/css/list.css" rel="stylesheet">
 </head>                  
 <body>
 <jsp:include page="/WEB-INF/views/menu.jsp" />
@@ -17,29 +17,19 @@
 	
 		<div>
 			<div>
-				<h1 id="title_movielist">MOVIE LIST</h1>
+				<h1 id="movielist">MOVIE LIST</h1>
 			</div>
 			<div>
 				<button class="button_list" id="add_list" onclick="location.href='add'">영화등록</button>
 			</div>
 			<div>
 				<form action="${pageContext.request.contextPath}/movie/list">
-				
-				<input type="hidden" name="searchWord" value="${searchWord}" />
-				<!-- <script>
-				document.querySelector('[name="searchWord"]').value = ${searchWord}
-				</script> -->
-				
 				<select class="button_list" id="range_list" name="range" onchange="this.form.submit()">
-					<option value="">정렬선택</option>
-					<option value="point">평점순</option>
+					<option value="point" selected>평점순</option>
 					<option value="title">제목순</option>
 					<option value="regist">등록순</option>
 					<option value="release">개봉일순</option>
 				</select>
-				<script type="text/javascript">
-					if('${range}' != "") { document.querySelector('[name="range"]').value = '${range}'; }
-				</script>
 				</form>
 			</div>
 		</div>

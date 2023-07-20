@@ -27,6 +27,18 @@ public class MovieVo {
 	
 	private String range;
 	
+	private String fileId; /* 첨부파일ID */
+	private MultipartFile posterFile;
+	
+	private String searchWord;
+	
+	public String getSearchWord() {
+		return searchWord;
+	}
+	public void setSearchWord(String searchWord) {
+		this.searchWord = searchWord;
+	}
+	
 	public String getRange() {
 		return range;
 	}
@@ -34,8 +46,6 @@ public class MovieVo {
 		this.range = range;
 	}
 	
-	private String fileId; /* 첨부파일ID */
-	private MultipartFile posterFile;
 	
 	public MultipartFile getPosterFile() {
 		return posterFile;

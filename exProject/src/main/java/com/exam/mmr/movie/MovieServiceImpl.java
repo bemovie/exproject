@@ -19,7 +19,7 @@ public class MovieServiceImpl implements MovieService {
 	private MovieDao movieDao;
 	
 	@Value("${bbs.upload.path}")
-	private String uploadPath; 
+	private String uploadPath;
 //	"C:/eGovFrame-4.0.0/worksapce.project/exProject/src/main/webapp/resources/upload"
 	
 	@PostConstruct //스프링이 현재 객체의 초기화 작업이 완료된 후 실행
