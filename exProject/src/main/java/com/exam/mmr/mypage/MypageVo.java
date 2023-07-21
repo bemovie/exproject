@@ -13,6 +13,15 @@ public class MypageVo extends MovieVo{
 
 	private List<MovieVo> movieList;
 	
+	int mypageCount = 0;
+	
+	public int getMypageCount() {
+		return mypageCount;
+	}
+	public void setMypageCount(int mypageCount) {
+		this.mypageCount = mypageCount;
+	}
+	
 	public List<MovieVo> getMovieList() {
 		return movieList;
 	}

@@ -42,10 +42,16 @@
 		FROM mypage
 	</select>
 	
-	<select id="selectMovie" resultType="MovieVo">
-    	SELECT movie_id, movie_title, release, nation, genre, runningtime, grade, outline, director, actor, ott, movie_point, file_id 
+	<select id="selectMypageCount" resultType="int">
+		SELECT COUNT(*)
+		FROM mypage
+		WHERE movie_id = #{movieId} AND user_id = #{userId}
+	</select>
+	
+	<select id="selectMypage" resultType="MypageVo">
+    	SELECT movie_id, user_id, mypage_point
     	FROM movie
-    	WHERE movie_id = #{movieId}
+    	WHERE movie_id = #{movieId} AND user_id = #{userId}
 	</select>
 	
 	 <select id="selectLogin" resultType="MovieVo">
@@ -59,18 +65,10 @@
 		VALUES ( #{movieId}, #{userId}, #{mypagePoint}, #{mypageComment} )
 	 </insert>
 	 
-	 <delete id="deleteMovie" parameterType="string">	 
-  <!--  DELETE FROM movie WHERE movie_id = #{value} -->
-	 	DELETE FROM movie WHERE movie_id = #{movieId}
+	 <delete id="deleteMypage" parameterType="string">	 
+	 	DELETE FROM mypage
+	 	WHERE movie_id = #{movieId} AND user_id = #{userId}
 	 </delete>
-	 <!-- 문자열,정수 등 단일값을 갖는 데이터를 파라미터(인자)로 받는 경우,
-	 #{속성명} 의 속성명에는 어떤 이름을 써도 무방 -->
-	 <!-- 일반적으로 value 또는 변수명을 사용 -->
- <!-- 파라미터(인자)로 받은 객체의 속성(변수)값들을 SQL문 내에 사용하기 위해서,
- #{속성명} 또는 ${속성명} 표현 사용 -->
- <!-- #{속성명} : JDBC의 ? 채우기와 같은 방식으로 동작 -->
- <!-- ${속성명} : 문자열 이어붙이기 방식으로 동작 (보안상 위험하므로 가급적 사용자제) -->
- <!-- "+ vo.getMovieId() + "과 같은 방식으로 동작 (SQL Injection에 취약) -->
   
   	<update id="updateMypage">
   		UPDATE mypage

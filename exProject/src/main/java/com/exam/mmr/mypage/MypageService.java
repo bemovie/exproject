@@ -16,5 +16,11 @@ public interface MypageService {
 	int updateMoviePoint(MypageVo vo);
 
 	int selectReviewCount();
+
+	int deleteMypage(MypageVo vo);
+
+	MypageVo selectMypage(MypageVo vo);
+
+	int selectMypageCount(MypageVo vo);
 	
 }

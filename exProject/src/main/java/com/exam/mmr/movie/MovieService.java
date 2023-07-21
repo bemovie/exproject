@@ -2,6 +2,8 @@ package com.exam.mmr.movie;
 
 import java.util.List;
 
+import com.exam.mmr.mypage.MypageVo;
+
 public interface MovieService {
 
 	List<MovieVo> selectMovieList(MovieVo vo);
@@ -10,7 +12,7 @@ public interface MovieService {
 
 	int deleteMovie(String movieId);
 
-	MovieVo selectMovie(String movieId);
+	MovieVo selectMovie(MypageVo vo);
 
 	int updateMovie(MovieVo vo);
 

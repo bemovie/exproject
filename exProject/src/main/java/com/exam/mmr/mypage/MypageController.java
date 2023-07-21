@@ -68,12 +68,26 @@ public class MypageController {
 		int m = mypageService.updateMoviePoint(vo);
 		System.out.println(m + "편의 평점 수정");
 		
-		model.addAttribute("myList", list);
+		model.addAttribute("condition", condition);
 		
-		return "redirect:/movie/edit?movieId=" + vo.getMovieId();
+		return "redirect:/movie/edit?movieId=" + vo.getMovieId() + "&userId=" + vo.getUserId();
+	}
+	
+	@GetMapping("/mypage/edit")
+	public String editform(MypageVo vo, Model model) {
+		MypageVo mvo = mypageService.selectMypage(vo);
+		model.addAttribute("mvo", mvo);
+		return "redirect:/movie/edit?movieId=" + vo.getMovieId() + "&userId=" + vo.getUserId();
 	}
 	
 	
+	@GetMapping("/mypage/del")
+	public String mypagedel(MypageVo vo, HttpSession session) {
+		UserVo uvo = (UserVo) session.getAttribute("loginUser");
+		vo.setUserId(uvo.getUserId());
+		int n = mypageService.deleteMypage(vo);
+		return "redirect:/movie/edit?movieId=" + vo.getMovieId() + "&userId=" + vo.getUserId();
+	}
 	
 }
 

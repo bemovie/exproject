@@ -20,5 +20,11 @@ public interface MypageDao {
 	int updateMoviePoint(MypageVo vo);
 
 	int selectReviewCount();
+
+	int deleteMypage(MypageVo vo);
+
+	MypageVo selectMypage(MypageVo vo);
+
+	int selectMypageCount(MypageVo vo);
 	
 }

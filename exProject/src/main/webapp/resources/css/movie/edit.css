@@ -94,6 +94,7 @@ body {
 
 #poster {
 	height: 520px;
+	/* opacity: 1; */
 }
 
 #point {
@@ -107,6 +108,13 @@ i {
 	font-size: 20px;
 	color: white;
 	font-style: normal;
+}
+
+#icon_eye {
+	color: #271F21;
+	font-size: 20px;
+	padding-left: 10px;
+	/* border: 2px solid red; */
 }
 
 #mypage_funclist {

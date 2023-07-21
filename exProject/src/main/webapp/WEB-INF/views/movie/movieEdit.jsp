@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>  
 
 <!DOCTYPE html>          
 <html>                   
@@ -30,24 +31,48 @@
 					${mvo.moviePoint}%
 				</div>
 				<div id="mypage_funclist">
-					<form action="${pageContext.request.contextPath}/mypage/add" method="get">
-						<input type="hidden" name="movieId" value="${mvo.movieId}" />
-						<c:choose>
-							<c:when test="${loginUser == null}">
-								<input class="mypage_func" type="button" value="보고싶어요" onclick="location.href='${pageContext.request.contextPath}/user/login'" />
-							</c:when>
-							<c:otherwise>
-								<input class="mypage_func" type="submit" value=${myList.movieTitle != null? '보고싶어요 취소' : '보고싶어요'} />						
-							</c:otherwise>
-						</c:choose>
-					</form>
-					<hr>
-					<form action="${pageContext.request.contextPath}/mypage/add" method="get">
-						<input type="hidden" name="movieId" value="${mvo.movieId}" />						
-						평점 <input type="range" name="mypagePoint" min="0" max="100" value=${myList.mypagePoint >=0? '${myList.myapgePoint}' : '50'} oninput="document.getElementById('value1').innerHTML=this.value;"/>
-       					<span id="value1">50</span>
-						<input class="mypage_func" type="submit" value="등록" />
-					</form>
+					<c:if test="${count == 0}">
+						<form action="${pageContext.request.contextPath}/mypage/add" method="get">
+							<input type="hidden" name="movieId" value="${mvo.movieId}" />
+							<c:choose>
+								<c:when test="${loginUser == null}">
+									<input class="mypage_func" type="button" value="보고싶어요" onclick="location.href='${pageContext.request.contextPath}/user/login'" />
+								</c:when>
+								<c:otherwise>
+									<button class="mypage_func" type="submit"><i class='bi bi-eye' id="icon_eye"></i>보고싶어요</button>					
+								</c:otherwise>
+							</c:choose>
+						</form>
+						<hr>
+						<form action="${pageContext.request.contextPath}/mypage/add" method="get">
+							<input type="hidden" name="movieId" value="${mvo.movieId}" />						
+							평점 <input type="range" name="mypagePoint" min="0" max="100" value=${myList.mypagePoint >=0? '${myList.myapgePoint}' : '50'} oninput="document.getElementById('value1').innerHTML=this.value;"/>
+	       					<span id="value1">50</span>
+							<input class="mypage_func" type="submit" value="등록" />
+						</form>
+					</c:if>
+					<c:if test="${count == 1}">
+						<form action="${pageContext.request.contextPath}/mypage/del" method="get">
+							<input type="hidden" name="movieId" value="${mvo.movieId}" />
+							<c:choose>
+								<c:when test="${loginUser == null}">
+									<input class="mypage_func" type="button" value="보고싶어요" onclick="location.href='${pageContext.request.contextPath}/user/login'" />
+								</c:when>
+								<c:otherwise>
+									<button class="mypage_func" type="submit"><i class='bi bi-eye-slash' id="icon_eye"></i>안보고싶어요</button>						
+								</c:otherwise>
+							</c:choose>
+						</form>
+						<hr>
+						<form action="${pageContext.request.contextPath}/mypage/add" method="get">
+							<input type="hidden" name="movieId" value="${mvo.movieId}" />						
+							평점
+							<input type="range" name="mypagePoint" min="0" max="100" value="${mvo.mypagePoint}" oninput="document.getElementById('value2').innerHTML=this.value;"/>
+							<span id="value2">${mvo.mypagePoint == -1? "없음" : mvo.mypagePoint}</span>
+							<input class="mypage_func" type="submit" value="수정" />
+						</form>
+					</c:if>
+						
 				</div>
 			</div>
 			
@@ -58,7 +83,7 @@
 					</div>
 					<div>
 						<i class="bi bi-calendar-check"> 개봉일</i>
-						${mvo.release}
+						<fmt:formatDate value="${mvo.release}" pattern="yyyy년 M월 d일"/>
 					</div>
 					<div>
 						<i class="bi bi-globe"> 제작국가</i>

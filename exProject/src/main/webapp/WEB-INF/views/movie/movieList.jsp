@@ -18,6 +18,7 @@
 		<div>
 			<div>
 				<h1 id="title_movielist">MOVIE LIST</h1>
+				<!-- <img src="D:\github\exproject\exProject\src\main\webapp\resources\upload\090e08ea-c7d1-45e7-ad33-ab4d937943f4.jpg"> -->
 			</div>
 			<div>
 				<button class="button_list" id="add_list" onclick="location.href='add'">영화등록</button>
@@ -47,7 +48,7 @@
 		<div id="list">
 		<!-- https://roqkffhwk.tistory.com/44 -->
 				<c:forEach var="vo" items="${movieList}" varStatus="status">
-					<div id="item" onclick="location.href='edit?movieId=${vo.movieId}'">
+					<div id="item" onclick="location.href='edit?movieId=${vo.movieId}&userId=${loginUser.userId}'">
 						<%-- ${vo.movieTitle} : ${vo.moviePoint} --%> <%-- : ${vo.moviePoint} --%>
 						<div><img src="${pageContext.request.contextPath}/resources/upload/${vo.fileId}" width="200" height="260px"></div>
 						<%-- <td><a href="${pageContext.request.contextPath}/movie/edit.do?movieId=<c:out value="${vo.movieId}" />"><c:out value="${vo.movieId}" /></a></td> --%>

@@ -45,6 +45,21 @@ public class MypageServiceImpl implements MypageService {
 	public int selectReviewCount() {
 		return mypageDao.selectReviewCount();
 	}
+
+	@Override
+	public int deleteMypage(MypageVo vo) {
+		return mypageDao.deleteMypage(vo);
+	}
+
+	@Override
+	public MypageVo selectMypage(MypageVo vo) {
+		return mypageDao.selectMypage(vo);
+	}
+
+	@Override
+	public int selectMypageCount(MypageVo vo) {
+		return mypageDao.selectMypageCount(vo);
+	}
 	
 	
 

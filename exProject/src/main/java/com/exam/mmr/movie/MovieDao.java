@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.exam.mmr.mypage.MypageVo;
+
 @Mapper
 public interface MovieDao {
 
@@ -13,7 +15,7 @@ public interface MovieDao {
 
 	int deleteMovie(String movieIdv);
 
-	MovieVo selectMovie(String movieId);
+	MovieVo selectMovie(MypageVo vo);
 
 	int updateMovie(MovieVo vo);
 

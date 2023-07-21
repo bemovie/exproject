@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 
 import com.exam.mmr.HomeController;
 import com.exam.mmr.mypage.MypageService;
+import com.exam.mmr.mypage.MypageVo;
 
 @Controller //스프링한테 Controller로 등록하라고 알려줌
 public class MovieController {	
@@ -75,9 +76,12 @@ public class MovieController {
 	
 	
 	@GetMapping("/movie/edit")
-	public String editform(String movieId, Model model) {
-		MovieVo vo = movieService.selectMovie(movieId);
-		model.addAttribute("mvo", vo);
+	public String editform(MypageVo vo, Model model) {
+		int count = mypageService.selectMypageCount(vo);
+		vo.setMypageCount(count);
+		MovieVo mvo = movieService.selectMovie(vo);
+		model.addAttribute("mvo", mvo);
+		model.addAttribute("count", count);
 		return "movie/movieEdit";
 	}
 

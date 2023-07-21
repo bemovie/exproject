@@ -48,10 +48,10 @@
 		FROM movie
 	</select>
 	
-	<select id="selectMovie" resultType="MovieVo">
-    	SELECT movie_id, movie_title, release, nation, genre, runningtime, grade, outline, director, actor, ott, movie_point, file_id 
-    	FROM movie
-    	WHERE movie_id = #{movieId}
+	<select id="selectMovie" resultType="MypageVo">
+    	SELECT DISTINCT a.movie_id, movie_title, release, nation, genre, runningtime, grade, outline, director, actor, ott, movie_point, file_id<if test="mypageCount == 1">, b.mypage_point</if> 
+    	FROM movie a JOIN mypage b ON a.movie_id = b.movie_id
+    	WHERE a.movie_id = #{movieId} <if test="mypageCount == 1">AND b.user_id = ${userId}</if>
 	</select>
 	
 	 <select id="selectLogin" resultType="MovieVo">

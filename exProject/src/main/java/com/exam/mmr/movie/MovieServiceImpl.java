@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.exam.mmr.mypage.MypageVo;
+
 @Service //스프링이 자동으로 객체를 만들어서 container에 등록함
 public class MovieServiceImpl implements MovieService {
 	
@@ -64,8 +66,8 @@ public class MovieServiceImpl implements MovieService {
 	}
 
 	@Override
-	public MovieVo selectMovie(String movieId) {
-		return movieDao.selectMovie(movieId);
+	public MovieVo selectMovie(MypageVo vo) {
+		return movieDao.selectMovie(vo);
 	}
 
 	@Override
