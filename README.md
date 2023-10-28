@@ -74,6 +74,11 @@
 ![image](https://github.com/bemovie/exproject/assets/127908469/a628aa24-4f22-44e1-a2fd-a8ac240976a6)
 
 
+## 시연 영상
+https://youtu.be/zWmAbyk8dEU
+
+
 ## 포트폴리오 첨부
 
+[정성호_포트폴리오.pptx](https://github.com/bemovie/exproject/files/13194651/_.pptx)
 
