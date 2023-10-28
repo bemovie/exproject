@@ -46,24 +46,29 @@
 
 - 메인 페이지
 
-![image](https://github.com/bemovie/exproject/assets/127908469/be7abfc2-a036-4ea9-9775-249296453588)
+![image](https://github.com/bemovie/exproject/assets/127908469/4cd1b4b0-54ec-458c-b3e8-cb26c67dbce3)
 
 
 - 로그인 페이지
 
-![image](https://github.com/bemovie/exproject/assets/127908469/72a870c2-59ab-4fdb-8777-a79d766184ab)
+![image](https://github.com/bemovie/exproject/assets/127908469/9b41604a-5cf5-4d60-8563-b63a6c301e2f)
 
 
-- 지도, 리스트 페이지
+- 영화목록 페이지
 
-![지도+리스트](https://github.com/bemovie/izitable_20231011/assets/127908469/961b50ae-9c9f-41ca-b4ed-97e64ceac019)
-
-
-- 마이 페이지 (회원)
-
-![예약관리](https://github.com/bemovie/izitable_20231011/assets/127908469/ed6a9de0-70ec-4b39-a3c8-9f654cdda750)
+![image](https://github.com/bemovie/exproject/assets/127908469/bba38fd1-2e86-4ec6-8de0-f6558fde47e7)
 
 
-- 마이 페이지 (매장)
+- 영화상세 페이지
 
-![마이페이지(매장)](https://github.com/bemovie/izitable_20231011/assets/127908469/0f15c97f-ce5d-4ba6-824a-24179ea60053)
+![image](https://github.com/bemovie/exproject/assets/127908469/3525d8b7-886f-4a4e-b791-f4288d7c0c4d)
+
+
+- 마이 페이지
+
+![image](https://github.com/bemovie/exproject/assets/127908469/5fba1227-8663-4349-bd2f-64b9ce5fa636)
+
+
+- 게시판
+
+![image](https://github.com/bemovie/exproject/assets/127908469/a628aa24-4f22-44e1-a2fd-a8ac240976a6)
