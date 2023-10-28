@@ -13,8 +13,11 @@
 ## 제작목적
 
 영화 시장에서 OTT의 비중이 늘어나는 가운데, 코로나 시국 이후 OTT 시장이 급격하게 커지면서 국내 OTT 시장의 규모도 급성장 중임.
+
 이뿐만 아니라, 넷플릭스나 디즈니 플러스 같은 글로벌 플랫폼도 국내에 진출하여 OTT 서비스 이용률의 꾸준한 상승을 보이고 있음.
+
 국내와 글로벌 플랫폼이 경쟁하며, 다양한 영상 컨텐츠들이 쏟아지고 있음.
+
 이에 따라 범람하는 OTT 영상 컨텐츠들 속에서, 자신에 맞는 영화 발견을 목적으로 영화를 찾고 리뷰할 수 있는 커뮤니티의 필요성을 느낌.
 
 
@@ -34,27 +37,21 @@
 ![image](https://github.com/bemovie/exproject/assets/127908469/c8cb7545-8ac1-46f7-b4f6-695c5e8df023)
 
 
-
 ## ERD
 
-![이지테이블-erd](https://github.com/bemovie/izitable_20231011/assets/127908469/bc507b5d-f6f3-4805-8021-59a177347b5e)
+![image](https://github.com/bemovie/exproject/assets/127908469/46969c93-4dbe-42d5-ae64-0b8e2d711d20)
 
 
 ## 프로젝트 페이지
 
 - 메인 페이지
 
-![Main-비주얼+인기음식점](https://github.com/bemovie/izitable_20231011/assets/127908469/fc448e63-5721-4699-8446-97ad282b7ace)
-
-
-- 회원가입 페이지
-
-![Join](https://github.com/bemovie/izitable_20231011/assets/127908469/3d08b92f-330b-4a25-9256-4d1a0dc74ca4)
+![image](https://github.com/bemovie/exproject/assets/127908469/be7abfc2-a036-4ea9-9775-249296453588)
 
 
 - 로그인 페이지
 
-![Login](https://github.com/bemovie/izitable_20231011/assets/127908469/8d4317b7-376b-4af6-83a1-59df98da2ac0)
+![image](https://github.com/bemovie/exproject/assets/127908469/72a870c2-59ab-4fdb-8777-a79d766184ab)
 
 
 - 지도, 리스트 페이지
