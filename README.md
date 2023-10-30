@@ -71,10 +71,10 @@
 
 
 ## 시연 영상
+
 https://youtu.be/zWmAbyk8dEU
 
 
 ## 포트폴리오 첨부
 
-[정성호_포트폴리오.pptx](https://github.com/bemovie/exproject/files/13194651/_.pptx)
-
+[정성호_포트폴리오_마무리.pdf](https://github.com/bemovie/exproject/files/13205147/_._.pdf)
